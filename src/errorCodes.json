@@ -1,0 +1,14 @@
+{
+  "AA_UE_001": "Unauthorized",
+  "AA_UE_002": "Access Token expired",
+  "AA_UE_003": "Refresh Token expired",
+  "AA_UE_004": "Invalid credentials",
+  "AA_UE_005": "Invalid refresh token",
+  "AA_UE_006": "Invalid or expire token",
+  "AA_FE_001": "Forbidden",
+  "AA_BRE_001": "Bad request",
+  "AA_BRE_002": "Not found",
+  "AA_BRE_003": "Data existed",
+  "AA_BRE_004": "Invalid incoming data",
+  "AA_ISE_001": "Internal server error"
+}
