@@ -8,7 +8,6 @@ class Email {
     this.to = user.email;
     this.url = url;
     this.from = `Admin <creamy-corner@mail.com>`;
-    // this.otp = otp;
   }
 
   newTransport() {
@@ -27,24 +26,21 @@ class Email {
     });
   }
 
-  // async send(template, subject) {
-  //   const html = await ejs.renderFile(`${__dirname}/../views/${template}.ejs`, {
-  //     email: this.to,
-  //     url: this.url,
-  //     // otp: this.otp,
-  //     subject,
-  //   });
-
   async send(template, subject) {
-    const html = await ejs.renderFile(
-      path.join(__dirname, `../views/${template}.ejs`),
-      {
-        email: this.to,
-        url: this.url,
-        subject,
-      }
-    );
-
+    console.log(__dirname);
+    const html = await ejs.renderFile(`${__dirname}/../views/${template}.ejs`, {
+      email: this.to,
+      url: this.url,
+      subject,
+    });
+    // const html = await ejs.renderFile(
+    //   path.join(__dirname, "..", "views", `${template}.ejs`),
+    //   {
+    //     email: this.to,
+    //     url: this.url,
+    //     subject,
+    //   }
+    // );
     const mailOptions = {
       from: this.from,
       to: this.to,
